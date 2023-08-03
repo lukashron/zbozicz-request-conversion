@@ -57,7 +57,7 @@ final class RequestFactoryTest extends TestCase
     }
 
     /**
-     * @return void
+     * @throws \LukasHron\ZboziCzRequestConversion\Exception\InvalidValueException
      */
     public function testMakeSandboxRequest(): void
     {

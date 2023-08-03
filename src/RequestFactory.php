@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace LukasHron\ZboziCzRequestConversion;
 
-use LukasHron\ZboziCzRequestConversion\Order\Order;
+use LukasHron\ZboziCzRequestConversion\Order\OrderInterface;
 
 final class RequestFactory
 {
@@ -38,7 +38,7 @@ final class RequestFactory
         $this->sandboxMode = $sandboxMode;
     }
 
-    public function make(Order $order): Request
+    public function make(OrderInterface $order): Request
     {
         return new Request(
             sprintf(
